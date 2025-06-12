@@ -1,30 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>myth0web</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TicketPress</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <meta name="author" content="Uriel Steinle" />
-    <meta
-    name="description"
-    content="Página web para probar cosas de la web." />
+    header {
+        height: 80px; /* o el alto que quieras */
+        background-color: #ffdd7e;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        justify-content: space-between;
+}
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    .logo {
+        width: 150px; /* o cualquier tamaño que quieras */
+        height: auto; /* mantiene la proporción */
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-color: #1e1e1e;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #ffdd7e;
+    }
+
+    .eventos {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eventos h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #ffdd7e;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .evento {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      text-align: center;
+    }
+
+    .evento img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      background-color: #ffdd7e;
+      color: #000;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
-    <h2>myth0</h2>
-    <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <hr>
-    <h4>Redes</h4> 
-    <p>Mi Github <a href="https://github.com/urstein" target="_blank">es este</a>.</p>
+
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Eventos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Próximos Eventos</h1>
+    <p>¡No te pierdas los mejores shows en vivo!</p>
+  </section>
+
+  <section class="eventos">
+    <h2>Eventos Destacados</h2>
+    <div class="event-grid">
+      <div class="evento">
+        <img src="evento1.jpg" alt="FDD Paraná">
+        <h3>Fiesta de Disfraces Paraná</h3>
+        <p>Evento realizado en Puerto Nuevo. <a href="https://www.instagram.com/fdd_parana/?hl=es" target="_blank">Instagram</a></p>
+
+      </div>
+      <div class="evento">
+        <img src="evento2.jpg" alt="Evento 2">
+        <h3>Nombre del Evento 2</h3>
+        <p>Descripción breve del evento. Lugar, fecha, etc.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 TicketPress
+  </footer>
+
 </body>
 </html>
